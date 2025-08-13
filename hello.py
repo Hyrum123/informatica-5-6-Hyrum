@@ -1,1 +1,2 @@
-print("hello, freaking world")
+name = input("Ey whatup fool, what's your name? ")
+print("Hello", name)
