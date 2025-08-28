@@ -1,4 +1,6 @@
 num = int(input("Enter a number my guy: "))
+if num == str:
+    print("no")
 step = int(input("Enter a step size my guy: "))
 start = step
 
