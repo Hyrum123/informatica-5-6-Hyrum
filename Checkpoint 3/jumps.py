@@ -1,9 +1,11 @@
 def main():
     num = input("Enter a number my guy: ")
     num = test(num)
+    num = int(num)
     step = input("Enter a step size my guy: ")
     step = test(step)
-    num = int(num)
+    step = int(step)
+    step = testzero(step)
     step = int(step)
     math_loop(num, step)
 
@@ -12,11 +14,15 @@ def test(a):
         a = input("Enter an integer fool: ")
     return a
 
+def testzero(i):
+    while i == 0 or i == "0":
+        i = input("Enter something other than zero fool: ")
+        test(i)
+    return i
+
 def math_loop(number, steps):
     start = steps
     while start < number:
-        if start == 0:
-            steps = int(input("Enter a new step size, not zero: "))
         print(start)
         start += steps
 
