@@ -7,10 +7,13 @@ def main():
     multiply(number)
     
 def multiply(num):
-    start = 1
-    while start <= 10:
-        multiply = int(num) * int(start)
-        print(f"{num} x {start} = {multiply}")
-        start += 1
+    first = 1
+    while first <= int(num):
+        second = 1
+        while second <= int(num):
+            multiply = first * second
+            print(f"{first} x {second} = {multiply}")
+            second += 1
+        first += 1
 
 main()
