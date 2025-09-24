@@ -15,9 +15,8 @@ def range_of_list(lists):
     return max(lists) - min(lists)
 
 def enter():
-    lists = []
     while True: 
-        
+        lists = []
 
 
 main()

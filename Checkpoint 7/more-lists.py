@@ -32,7 +32,7 @@ matrix = [[1, 2, 3],
 # print(matrix[2][0])
 # print(matrix[0][1])
 
-for column in matrix:
-    for row in range(3):
-        print(matrix[row])
+for row in range(3):
+    for column in matrix:
+        print(column[row])
         
