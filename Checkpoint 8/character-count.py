@@ -10,7 +10,6 @@ def count(message):
 
     print(dictionary)
     print(len(message))
-    # key = dictionary.index(max(list(dictionary.values())))
     print(f"The character {list(dictionary.keys())[list(dictionary.values()).index(max(list(dictionary.values())))]} has {max(list(dictionary.values()))} chartacters")
 
 main()
