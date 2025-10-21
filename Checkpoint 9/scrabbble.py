@@ -23,7 +23,7 @@ print("Welcome to Scrabble!")
 print(f"Your letters are:")
 print(turn_letters)
 
-while len(turn_letters) > 0:
+while True:
     print("Type your word (blank to finish the game):")
     word_attempt = input().upper()
     if word_attempt == "":
@@ -34,10 +34,9 @@ while len(turn_letters) > 0:
             turn_letters.remove(word_attempt[l])
             turn_letters.append(random.choice(list(letter_values.keys())))
     else:
-        print("Please type a word that uses your letters.")
+        print("Please type a word that uses your letters.") 
 
     print("Points:", points)
-
     print("Remaining letters:")
     print(turn_letters)
         
