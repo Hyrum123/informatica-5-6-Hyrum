@@ -3,11 +3,22 @@ foods = {
 }
 
 def main():
-    choices = input("What two foods do you want? ").lower().split(", ")
-    print(calories(choices[0], choices[1]))
+    choices = input("What two foods do you want? (seperated by a comma) ").lower().split(", ")
+    while True:
+        try:
+            print(f"The number of calores total is: {calories(choices[0], choices[1])}")
+            break
+        except IndexError:
+            choices = input("Enter TWO foods: ").lower().split(", ")
+            pass
 
 def calories(food1, food2):
-    add = foods[food1] + foods[food2]
-    return add
+    try:
+        if (food1 == "milk" or food2 == "milk") and (food1 == "watermelon" or food2 == "watermelon"):
+            raise ValueError("DON'T EVER MIX THOSE")
+        add = foods[food1] + foods[food2]
+        return add
+    except KeyError:
+        print("Bro, that isn't part of the food list")
 
 main()
