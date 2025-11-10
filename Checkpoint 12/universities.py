@@ -1,0 +1,1 @@
+universities = {"Tec Milenio": {"majors": 9, "cost": 1200, "distance": 299}, "UACJ": {"majors": 8, "cost": 3800, "distance": 308}, "BYU Pathway": {"majors": 7, "cost": 4600, "distance": 0}, "ITS NCG": {"majors": 7, "cost": 2940, "distance": 25}}
