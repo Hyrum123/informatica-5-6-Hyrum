@@ -6,13 +6,9 @@ correct_names = {"simplify": "simplify", "factor": "factor", "derive": "derive",
 
 while True:
     type_operation = input("What type of operation you want to do?, we have \nSimplify, Factor, Derive, Integrate, Cosine, Sine, Tangent, etc.\n").lower()
-
     expression = input("Awesome, now enter the expression you want to solve\n")
-    # equation = input("Enter your operation and your expression (seperated by a comma): ").lower().split(",")
-    # # for element in equation:
-    # #     print(element)
-
     verbs = { "derive" : "derivative", "simplify" : "simplification", "factor" : "factorization", "integrate" : "integral" }
+
     try:
         answer = requests.get("https://newton.vercel.app/api/v2/"+ correct_names[type_operation] + "/" + expression)
         break
@@ -23,3 +19,5 @@ try:
     print(f"The {verbs[answer.json()["operation"]]} of {answer.json()["expression"]} is: {answer.json()["result"]}")
 except KeyError:
     print(f"The {answer.json()["operation"]} of {answer.json()["expression"]} is: {answer.json()["result"]}")
+
+    
