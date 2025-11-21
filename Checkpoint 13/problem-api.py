@@ -20,4 +20,3 @@ try:
 except KeyError:
     print(f"The {answer.json()["operation"]} of {answer.json()["expression"]} is: {answer.json()["result"]}")
 
-    
